@@ -23,10 +23,9 @@ begin
     map_r : dff port map(rin,en,rst,clk,rout);
     map_l : dff port map(lin,en,rst,clk,lout);
 
-    --gin <= (not gout and not lout not yout and rout) or (gout and lout and not yout and not rout);
-    gin <= not gout and not yout and rout;
+    gin <= (not gout and not lout and not yout and rout) or (gout and lout and not yout and not rout);
     yin <= gout and not lout and not yout and not rout;
-    rin <= (not gout and not lout and not yout and not rout) or (not gout not lout and yout and not rout);
+    rin <= (not gout and not lout and not yout and not rout) or (not gout and not lout and yout and not rout);
     lin <= not gout and not lout and not yout and rout;
 
     g <= gout;
