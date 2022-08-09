@@ -11,7 +11,7 @@ architecture arch_tl_tb of tl_tb is
     
     component tl is
         port(clk,rst : in std_logic;
-        g,y,r : out std_logic);
+        g,y,r,l : out std_logic);
     end component;
 
 begin 
